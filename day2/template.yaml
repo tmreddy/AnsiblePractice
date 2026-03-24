@@ -1,0 +1,12 @@
+---
+- name: Create Dynamic Html
+  hosts: local, web
+  become: yes
+  vars:
+    username: Mallikarjun
+
+  tasks:  
+    - name: Deploy template
+      template:
+        src: templates/index.j2
+        dest: /var/www/html/index.html
