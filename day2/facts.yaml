@@ -1,0 +1,7 @@
+- name: Show OS info
+  hosts: local
+
+  tasks:
+    - name: Print OS
+      debug:
+        msg: "OS is {{ ansible_distribution }}"
